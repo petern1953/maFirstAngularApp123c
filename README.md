@@ -209,7 +209,7 @@ setHero metódus
 -------------------------
 eddig volt az 123b, 
 az 3. Angular 2 plusz keretrendszer - Ajax és Angular,
-mostantól az 123c
+innentőll az 123c
 Angular Routing - útválasztás
 -------------------------
 16. Bootstrap
