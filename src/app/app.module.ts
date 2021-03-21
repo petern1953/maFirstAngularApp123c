@@ -13,6 +13,7 @@ import { FootballService } from './service/football.service';
 import { HeroService } from './service/hero.service';
 import { HomeComponent } from './home/home.component';
 import { HeroComponent } from './hero/hero.component';
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HeroComponent } from './hero/hero.component';
     DelayDirective,
     HighlightDirective,
     HomeComponent,
-    HeroComponent
+    HeroComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,

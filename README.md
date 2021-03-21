@@ -239,19 +239,47 @@ import { HeroComponent } from './hero/hero.component';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  { path: '',
-  component: HomeComponent },
-  { path: '',
-  component: HeroComponent },
-  { path: '**',
-  component: HomeComponent },
+  { path: '', component: HomeComponent },
+  { path: 'hero', component: HeroComponent },
+  { path: '**', component: HomeComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
+--
+20. navigációs sáv
 
+ng g c nav
+--
+21. nav.component.html:
+
+a) b4-navbar-default Bootstrap navbar
+b) kódot egyszerűsítjük, href-eket átírjuk
+  routerLink="/"
+  routerLink="/hero"
+c) routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+  <a class="navbar-brand" routerLink="/">Karrier app</a>
+  <div class="collapse navbar-collapse" id="collapsibleNavId">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        <a class="nav-link" routerLink="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        <a class="nav-link" routerLink="/hero">Heroes</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+--
+22. app.component.html:
+
+<app-nav></app-nav>
+<router-outlet></router-outlet>
+--
 
 
 
