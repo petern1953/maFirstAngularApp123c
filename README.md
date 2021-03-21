@@ -206,6 +206,46 @@ setHero metódus
   setHero(hero: Hero): void {
     this.myHero = hero;
   }
+-------------------------
+eddig volt az 123b, 
+az 3. Angular 2 plusz keretrendszer - Ajax és Angular,
+mostantól az 123c
+Angular Routing - útválasztás
+-------------------------
+16. Bootstrap
+index.html:
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 --
-16.
+17. app.module.ts:
+  kell ez, ha van app-routing.module.ts???
+
+import { RouterModule, Routes } from '@angular/router';
+
+  imports: [ ...
+    RouterModule,
+    Routes,
+--
+18. komponensek generálása a navigációhoz:
+home, hero
+
+ng g c home
+ng g c hero
+--
+19. app-routing.module.ts:
+
+import { Routes, RouterModule } from '@angular/router';
+
+const routes: Routes = [
+  { path: '',
+  component: 
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+
+
+
 
