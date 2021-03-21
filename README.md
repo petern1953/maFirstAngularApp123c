@@ -235,10 +235,16 @@ ng g c hero
 19. app-routing.module.ts:
 
 import { Routes, RouterModule } from '@angular/router';
+import { HeroComponent } from './hero/hero.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   { path: '',
-  component: 
+  component: HomeComponent },
+  { path: '',
+  component: HeroComponent },
+  { path: '**',
+  component: HomeComponent },
 ];
 
 @NgModule({
